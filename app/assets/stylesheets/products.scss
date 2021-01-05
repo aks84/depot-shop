@@ -1,0 +1,24 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.products{
+
+	width:70%;
+	margin-right: 0 auto;
+	margin-left: 0 auto;
+
+section{
+	margin-bottom: 10px;
+    float: left;
+	img {
+    float: left;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+}
+
+}

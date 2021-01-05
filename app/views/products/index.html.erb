@@ -1,0 +1,25 @@
+<% if notice %>
+<aside id="notice"><%= notice %></aside>
+<% end %>
+<h1>Products</h1>
+
+
+    <% @products.each do |product| %>
+
+        <section>
+          <%= image_tag(product.image_url) %>
+          <h2><%= link_to product.title, product_path(product) %></h2>
+          <p><%= product.description %></p>
+          <p><%= number_to_currency(product.price, unit: "₹ " ) %></p>
+          <p>
+          <%= link_to 'Show', product %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </section>
+
+    <% end %>
+
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

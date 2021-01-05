@@ -1,0 +1,17 @@
+<% if notice %>
+<aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h1>Your Tees Catalog</h1>
+
+<ul>
+	 <% @products.each do |product| %>
+        <li>
+          <%= image_tag(product.image_url) %>
+          <h2><%= link_to product.title, product_path(product) %></h2>
+          <p><%= product.description %></p>
+          <p><%= number_to_currency(product.price, unit: "₹ " ) %></p>
+        </li>
+
+	<% end %>
+</ul>
