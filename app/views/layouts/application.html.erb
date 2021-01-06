@@ -10,6 +10,24 @@
   </head>
 
   <body>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <%= image_tag 'depot.png', alt: "depot shop" %>
+        </a>
+      </div>
+      <div class="main_nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/Questions">Questions</a></li>
+          <li><a href="/News">News</a></li>
+          <li><a href="/Contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+
+
    <main class='<%= controller.controller_name %>'>
     <%= yield %>
   </main>
